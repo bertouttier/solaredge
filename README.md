@@ -4,14 +4,14 @@ API wrapper for Solaredge monitoring service.
 See https://www.solaredge.com/sites/default/files/se_monitoring_api.pdf
 
 ## Create a new connection by supplying your Solaredge API key
-```
+``` python
 s = solaredge.Solaredge("APIKEY")
 ```
 
 ## API Requests
 11 API requests are supported. The methods return the parsed JSON response as a dict.
 
-```
+``` python
 def get_list(self, size=100, startIndex=0, searchText="", sortProperty="", sortOrder='ASC', status='Active,Pending'):
 
 def get_details(self, site_id):
