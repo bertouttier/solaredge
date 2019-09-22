@@ -16,23 +16,23 @@ def get_list(self, size=100, startIndex=0, searchText="", sortProperty="", sortO
 
 def get_details(self, site_id):
 
-def get_dataPeriod(self, site_id):
+def get_data_period(self, site_id):
 
 def get_energy(self, site_id, startDate, endDate, timeUnit='DAY'):
 
-def get_timeFrameEnergy(self, site_id, startDate, endDate, timeUnit='DAY'):
+def get_time_frame_energy(self, site_id, startDate, endDate, timeUnit='DAY'):
 
 def get_power(self, site_id, startTime, endTime):
 
 def get_overview(self, site_id):
 
-def get_powerDetails(self, site_id, startTime, endTime, meters=None):
+def get_power_details(self, site_id, startTime, endTime, meters=None):
 
-def get_energyDetails(self, site_id, startTime, endTime, meters=None, timeUnit="DAY"):
+def get_energy_details(self, site_id, startTime, endTime, meters=None, timeUnit="DAY"):
 
-def get_currentPowerFlow(self, site_id):
+def get_current_power_flow(self, site_id):
 
-def get_storageData(self, site_id, startTime, endTime, serials=None):
+def get_storage_data(self, site_id, startTime, endTime, serials=None):
 ```
 
 ## TODO
