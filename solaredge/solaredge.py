@@ -52,7 +52,7 @@ class Solaredge(object):
         if sortProperty:
             params['sortProperty'] = sortProperty
 
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -73,7 +73,7 @@ class Solaredge(object):
         params = {
             'api_key': self.token
         }
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -94,7 +94,7 @@ class Solaredge(object):
         params = {
             'api_key': self.token
         }
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -107,7 +107,7 @@ class Solaredge(object):
             'endDate': endDate,
             'timeUnit': timeUnit
         }
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -119,7 +119,7 @@ class Solaredge(object):
             'endDate': endDate,
             'timeUnit': timeUnit
         }
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -131,7 +131,7 @@ class Solaredge(object):
             'startTime': startTime,
             'endTime': endTime
         }
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -141,7 +141,7 @@ class Solaredge(object):
         params = {
             'api_key': self.token
         }
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -156,7 +156,7 @@ class Solaredge(object):
         if meters:
             params['meters'] = meters
 
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -172,7 +172,7 @@ class Solaredge(object):
         if meters:
             params['meters'] = meters
 
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -182,7 +182,7 @@ class Solaredge(object):
             'api_key': self.token
         }
 
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
@@ -197,7 +197,7 @@ class Solaredge(object):
         if serials:
             params['serials'] = serials.join(',')
 
-        r = requests.get(url, params)
+        r = requests.get(url, params, headers={"content-type":"application/json"})
         r.raise_for_status()
         return r.json()
 
