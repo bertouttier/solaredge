@@ -204,7 +204,7 @@ class Solaredge(object):
     def get_componentList(self, site_id):
         url = urljoin(BASEURL, "equipment", site_id, "list")
         params = {
-            'api_key': self.token 
+            'api_key': self.token
         }
 
         r = requests.get(url, params)
@@ -221,8 +221,8 @@ class Solaredge(object):
         r.raise_for_status()
         return r.json()
 
-    def get_inverterDetails(self, site_id, invertor_id, startTime, endTime):
-        url = urljoin(BASEURL, "equipment", site_id, invertor_id, "data")
+    def get_inverterDetails(self, site_id, inverter_id, startTime, endTime):
+        url = urljoin(BASEURL, "equipment", site_id, inverter_id, "data")
         params = {
             'api_key': self.token,
             'startTime': startTime,
